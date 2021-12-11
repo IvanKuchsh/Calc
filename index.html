@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Culc</title>
+</head>
+<body>
+    <div class="culc">
+        <div class="container">
+            <div class="culc__title">Рассчитать ипотеку</div>
+            <div class="culc__wrapper">
+                <div class="culc__count">
+                    <div class="culc__item">
+                        <h3 class="culc__item-title">Стоимость недвижимости</h3>
+                        <input type="number" id="total-cost" class="culc__item-input" value="0">
+                        <input type="range" id="total-cost-range" min="0" max="10000000" class="culc__item-range" value="0">
+                    </div>
+                    <div class="culc__item">
+                        <h3 class="culc__item-title">Первоначальный взнос</h3>
+                        <input type="number" id="an-initial-fee" class="culc__item-input" value="0">
+                        <input type="range" id="an-initial-fee-range" min="100000" max="10000000" class="culc__item-range" value="0">
+                    </div>
+                    <div class="culc__item">
+                        <h3 class="culc__item-title">Срок кредита</h3>
+                        <input type="number" id="credit-term" class="culc__item-input" value="0">
+                        <input type="range" id="credit-term-range" min="1" max="20" class="culc__item-range" value="0">
+                    </div>
+
+                    <div class="culc__choose">
+                        <div class="culc__choose-title">Выбрать банк</div>
+                        <div class="culc__choose-items">
+                            <div data-name="alfa" class="culc__choose-item culc__choose-item_active">
+                                <div>Альфа-банк</div>
+                                <div>8,7%</div>
+                            </div>
+                            <div data-name="sberbank" class="culc__choose-item">
+                                <div>Сбербанк</div>
+                                <div>8,4%</div>
+                            </div>
+                            <div data-name="pochta" class="culc__choose-item">
+                                <div>Почта-банк</div>
+                                <div>7,9%</div>
+                            </div>
+                            <div data-name="tinkoff" class="culc__choose-item">
+                                <div>Тинькофф-банк</div>
+                                <div>9,2%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="culc__result">
+                    <div class="culc__result-items">
+                        <div class="culc__result-item">
+                            <div class="culc__result-title">Сумма кредита</div>
+                            <div id="amount-of-credit" class="culc__result-sum">0 <span>P</span></div>
+                        </div>
+                        <div class="culc__result-item">
+                            <div class="culc__result-title">Ежемесячный платеж</div>
+                            <div id="monthy-payment" class="culc__result-sum">0 <span>P</span></div>
+                        </div>
+                        <div class="culc__result-item">
+                            <div class="culc__result-title">Рекомендуемый доход</div>
+                            <div id="recommended-incone" class="culc__result-sum">0 <span>P</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
